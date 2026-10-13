@@ -1,1 +1,553 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il tuo sito web professionale da 19 €/mese | Dominio, hosting ed email inclusi</title>
+<meta name="theme-color" content="#060914">
+<meta name="description" content="Sito web professionale per piccole attività: landing page, dominio, hosting, SSL ed email incluse. Pacchetti da 19 €/mese, senza pensieri tecnici.">
+<style>
+  @property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
+  :root{
+    --bg:#060914;
+    --bg2:#0b1024;
+    --glass:rgba(255,255,255,.045);
+    --glass2:rgba(255,255,255,.08);
+    --ink:#eef1ff;
+    --muted:#9aa5c7;
+    --line:rgba(255,255,255,.1);
+    --brand:#7b8cff;
+    --brand-dark:#4a5bff;
+    --cyan:#22d3ee;
+    --accent:#ff8a3d;
+    --accent2:#ff4d8d;
+    --ok:#34e08a;
+    --radius:18px;
+    --shadow:0 20px 60px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;
+    background:
+      radial-gradient(900px 600px at 90% -5%,rgba(91,110,255,.28),transparent 60%),
+      radial-gradient(800px 600px at -10% 30%,rgba(34,211,238,.12),transparent 60%),
+      radial-gradient(900px 700px at 100% 75%,rgba(255,77,141,.12),transparent 60%),
+      var(--bg);
+    background-attachment:fixed;
+    overflow-x:hidden;
+  }
+  img,svg{max-width:100%}
+  a{color:inherit}
+  ::selection{background:var(--brand-dark);color:#fff}
+  .container{width:min(1120px,92%);margin-inline:auto}
+  section{padding:96px 0;position:relative}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.28);padding:6px 14px;border-radius:999px;margin-bottom:18px}
+  h1,h2,h3{line-height:1.12;letter-spacing:-.02em}
+  h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:14px}
+  h2,.hero h1{text-wrap:balance}
+  .lead{color:var(--muted);font-size:1.1rem;max-width:660px}
+  .center{text-align:center}
+  .center .lead{margin-inline:auto}
 
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:14px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;font-size:1rem;transition:transform .25s,box-shadow .25s,background .25s,border-color .25s;position:relative;overflow:hidden}
+  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 10px 30px rgba(255,100,90,.35)}
+  .btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(255,100,90,.5)}
+  .btn-primary:hover::after{transform:translateX(120%)}
+  .btn-ghost{border-color:var(--line);background:var(--glass);color:var(--ink);backdrop-filter:blur(8px)}
+  .btn-ghost:hover{border-color:var(--brand);background:var(--glass2);transform:translateY(-3px)}
+
+  /* progress bar */
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:100;background:linear-gradient(90deg,var(--cyan),var(--brand),var(--accent2))}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:rgba(6,9,20,.6);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:.3s}
+  header.scrolled{background:rgba(6,9,20,.85);border-bottom-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-weight:800;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+  .logo i{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand-dark),var(--cyan));display:inline-block;box-shadow:0 0 24px rgba(91,110,255,.6)}
+  nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+  nav a{text-decoration:none;font-weight:600;color:var(--muted);font-size:.95rem;transition:color .2s}
+  nav a:hover{color:#fff}
+  nav .btn{padding:10px 20px;color:#fff;font-size:.92rem}
+  @media(max-width:860px){nav li:not(:last-child){display:none}}
+
+  /* HERO */
+  .hero{padding:90px 0 110px;overflow:hidden}
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none}
+  .hero::before{width:420px;height:420px;background:rgba(91,110,255,.35);top:-80px;right:8%;animation:float 11s ease-in-out infinite}
+  .hero::after{width:320px;height:320px;background:rgba(255,77,141,.22);bottom:-60px;left:2%;animation:float 14s ease-in-out infinite reverse}
+  @keyframes float{50%{transform:translate(30px,-30px) scale(1.08)}}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative;z-index:1}
+  .hero h1{font-size:clamp(2.3rem,5.2vw,3.8rem);margin-bottom:22px}
+  .hero h1 span{background:linear-gradient(90deg,#9fb0ff,var(--cyan) 60%,#7ef0c6);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{font-size:1.15rem;color:var(--muted);margin-bottom:32px;max-width:540px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+  .checks{display:flex;gap:22px;flex-wrap:wrap;list-style:none;color:var(--muted);font-size:.95rem;font-weight:600}
+  .checks li::before{content:"✓";color:var(--ok);font-weight:800;margin-right:6px}
+  .mock{background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow),0 0 80px rgba(91,110,255,.25);overflow:hidden;backdrop-filter:blur(10px);animation:bob 6s ease-in-out infinite}
+  @keyframes bob{50%{transform:translateY(-12px)}}
+  .mock-bar{display:flex;align-items:center;gap:6px;padding:12px 16px;background:rgba(255,255,255,.05);border-bottom:1px solid var(--line)}
+  .mock-bar b{width:10px;height:10px;border-radius:50%;background:#ff5f57}
+  .mock-bar b:nth-child(2){background:#febc2e}
+  .mock-bar b:nth-child(3){background:#28c840}
+  .mock-url{margin-left:12px;flex:1;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:8px;padding:4px 12px;font-size:.8rem;color:var(--muted)}
+  .mock-url::before{content:"🔒 ";font-size:.75rem}
+  .mock-body{padding:26px}
+  .mock-hero{height:130px;border-radius:14px;background:linear-gradient(135deg,var(--brand-dark),var(--cyan));margin-bottom:18px;display:flex;align-items:end;padding:16px;color:#fff;font-weight:800;font-size:1.2rem;box-shadow:0 10px 30px rgba(34,211,238,.25)}
+  .mock-line{height:10px;border-radius:6px;background:rgba(255,255,255,.12);margin-bottom:10px}
+  .mock-line.s{width:60%}
+  .mock-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+  .mock-cards div{height:62px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.mock{max-width:480px}}
+
+  /* CARDS */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+  .card{background:var(--glass);border:1px solid var(--line);border-radius:var(--radius);padding:30px;backdrop-filter:blur(10px);transition:transform .3s,border-color .3s,box-shadow .3s,background .3s;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;inset:0;background:radial-gradient(300px 140px at 0 0,rgba(123,140,255,.18),transparent 70%);opacity:0;transition:opacity .3s}
+  .card:hover{transform:translateY(-6px);border-color:rgba(123,140,255,.5);box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 40px rgba(91,110,255,.18);background:var(--glass2)}
+  .card:hover::before{opacity:1}
+  .card .ico{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,rgba(91,110,255,.35),rgba(34,211,238,.25));border:1px solid var(--line);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px;position:relative}
+  .card h3{font-size:1.15rem;margin-bottom:8px;position:relative}
+  .card p{color:var(--muted);font-size:.97rem;position:relative}
+  @media(max-width:900px){.grid3{grid-template-columns:1fr}}
+  .soft{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));border-block:1px solid var(--line)}
+
+  /* STEPS */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px;counter-reset:s;position:relative}
+  .step{position:relative;padding:28px;background:var(--glass);border:1px solid var(--line);border-radius:var(--radius);transition:transform .3s,border-color .3s}
+  .step:hover{transform:translateY(-6px);border-color:rgba(34,211,238,.5)}
+  .step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--brand-dark),var(--cyan));color:#fff;font-weight:800;margin-bottom:16px;box-shadow:0 0 24px rgba(34,211,238,.4)}
+  .step h3{font-size:1.05rem;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:.93rem}
+  @media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+  /* PRICING */
+  .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:58px;align-items:stretch}
+  .plan{position:relative;background:var(--glass);border:1px solid var(--line);border-radius:22px;padding:36px 30px;display:flex;flex-direction:column;backdrop-filter:blur(10px);transition:transform .3s,border-color .3s,box-shadow .3s}
+  .plan:hover{transform:translateY(-6px);border-color:rgba(123,140,255,.5)}
+  .plan.featured{border:none;background:linear-gradient(180deg,rgba(40,50,120,.55),rgba(14,19,50,.85));transform:translateY(-14px);box-shadow:0 30px 80px rgba(60,80,255,.35)}
+  .plan.featured:hover{transform:translateY(-20px)}
+  .plan.featured::before{content:"";position:absolute;inset:0;border-radius:22px;padding:2px;background:conic-gradient(from var(--a),var(--cyan),var(--brand-dark),var(--accent2),var(--accent),var(--cyan));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 6s linear infinite;pointer-events:none}
+  @keyframes spin{to{--a:360deg}}
+  .badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-size:.78rem;font-weight:800;padding:7px 16px;border-radius:999px;letter-spacing:.05em;white-space:nowrap;box-shadow:0 8px 24px rgba(255,100,90,.45);z-index:2}
+  .plan h3{font-size:1.25rem}
+  .plan .for{color:var(--muted);font-size:.93rem;margin:6px 0 20px;min-height:46px}
+  .price{font-size:3rem;font-weight:800;letter-spacing:-.03em}
+  .plan.featured .price{background:linear-gradient(90deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .price small{font-size:1rem;font-weight:600;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+  .vat{color:var(--muted);font-size:.82rem;margin-bottom:24px}
+  .plan ul{list-style:none;margin-bottom:30px;flex:1}
+  .plan li{padding:9px 0 9px 28px;position:relative;font-size:.96rem;border-bottom:1px dashed var(--line)}
+  .plan li:last-child{border:0}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:800}
+  .plan .btn{width:100%}
+  @media(max-width:960px){.pricing{grid-template-columns:1fr;max-width:460px;margin-inline:auto}.plan.featured{transform:none}.plan.featured:hover{transform:translateY(-6px)}}
+
+  .setup{margin-top:40px;background:linear-gradient(135deg,rgba(91,110,255,.28),rgba(34,211,238,.14));border:1px solid rgba(123,140,255,.35);color:#fff;border-radius:22px;padding:36px 40px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;backdrop-filter:blur(10px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+  .setup .big{font-size:3rem;font-weight:800;line-height:1;background:linear-gradient(90deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .setup .big small{display:block;font-size:.85rem;font-weight:600;color:var(--muted);-webkit-text-fill-color:var(--muted);margin-top:8px}
+  .setup ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:.95rem}
+  .setup li::before{content:"✓ ";color:var(--ok);font-weight:800}
+  .setup h3{grid-column:1/-1;font-size:1.15rem;margin-bottom:6px}
+  @media(max-width:760px){.setup{grid-template-columns:1fr;padding:28px}.setup ul{grid-template-columns:1fr}}
+
+  /* ADDONS */
+  .addons{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px}
+  .addon{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;background:var(--glass);border:1px solid var(--line);border-radius:14px;font-size:.96rem;transition:transform .25s,border-color .25s,background .25s}
+  .addon:hover{transform:translateX(6px);border-color:rgba(255,138,61,.55);background:var(--glass2)}
+  .addon b{white-space:nowrap;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  @media(max-width:760px){.addons{grid-template-columns:1fr}}
+
+  /* EXAMPLE */
+  .example{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .receipt{background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:var(--shadow);position:relative}
+  .receipt::after{content:"";position:absolute;inset:-1px;border-radius:22px;background:linear-gradient(135deg,rgba(34,211,238,.4),transparent 40%,rgba(255,77,141,.35));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:1px;pointer-events:none}
+  .receipt h4{font-size:1.1rem;margin-bottom:16px}
+  .row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:.96rem}
+  .row.total{border:0;font-weight:800;font-size:1.1rem;padding-top:16px;color:var(--cyan)}
+  .row.sep{margin-top:10px}
+  @media(max-width:860px){.example{grid-template-columns:1fr}}
+  .example ul{list-style:none;margin-top:22px}
+  .example li{padding:9px 0 9px 32px;position:relative;color:var(--muted)}
+  .example li::before{content:"★";position:absolute;left:0;color:var(--accent)}
+
+  /* FAQ */
+  .faq{max-width:780px;margin:48px auto 0}
+  details{background:var(--glass);border:1px solid var(--line);border-radius:16px;padding:20px 24px;margin-bottom:12px;transition:border-color .25s,background .25s}
+  details:hover{border-color:rgba(123,140,255,.45)}
+  details[open]{background:var(--glass2);border-color:rgba(123,140,255,.5)}
+  summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--cyan);transition:transform .3s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{margin-top:14px;color:var(--muted)}
+
+  /* CONTACT */
+  .contact{background:radial-gradient(700px 400px at 20% 20%,rgba(91,110,255,.35),transparent 60%),radial-gradient(600px 400px at 90% 90%,rgba(255,77,141,.25),transparent 60%),var(--bg2);border-top:1px solid var(--line)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .contact h2{color:#fff}
+  .contact-info{margin-top:28px;list-style:none}
+  .contact-info li{padding:12px 18px;margin-bottom:10px;font-weight:600;background:var(--glass);border:1px solid var(--line);border-radius:14px;max-width:360px}
+  form{background:rgba(255,255,255,.06);border:1px solid var(--line);backdrop-filter:blur(16px);color:var(--ink);padding:32px;border-radius:22px;box-shadow:var(--shadow)}
+  label{display:block;font-weight:700;font-size:.88rem;margin:16px 0 6px;color:#cdd5f5}
+  label:first-of-type{margin-top:0}
+  input,select,textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:12px;font:inherit;background:rgba(0,0,0,.35);color:var(--ink);transition:border-color .2s,box-shadow .2s}
+  select option{background:#0b1024;color:#fff}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 4px rgba(34,211,238,.18)}
+  textarea{min-height:90px;resize:vertical}
+  form .btn{width:100%;margin-top:22px}
+  .note{font-size:.8rem;color:var(--muted);margin-top:12px;text-align:center}
+
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+  footer{padding:32px 0;color:var(--muted);font-size:.88rem;text-align:center;border-top:1px solid var(--line);background:var(--bg)}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;translate:0 28px;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1),transform .3s,border-color .3s,box-shadow .3s,background .3s}
+  .reveal.in{opacity:1;translate:0 0}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;translate:none}
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header>
+  <div class="container nav">
+    <a href="#top" class="logo"><i></i><span id="brandName">Il Tuo Brand</span></a>
+    <nav>
+      <ul>
+        <li><a href="#vantaggi">Vantaggi</a></li>
+        <li><a href="#come-funziona">Come funziona</a></li>
+        <li><a href="#pacchetti">Pacchetti</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contatti" class="btn btn-primary">Richiedi un preventivo</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Per negozi, studi e piccole attività</span>
+      <h1>Il tuo sito web professionale, <span>pronto in pochi giorni</span></h1>
+      <p>Sito, dominio, hosting, certificato SSL ed email professionali: tutto incluso in un unico canone mensile. Tu pensi al tuo lavoro, alla parte tecnica pensiamo noi.</p>
+      <div class="hero-cta">
+        <a href="#contatti" class="btn btn-primary">Richiedi un preventivo gratuito</a>
+        <a href="#pacchetti" class="btn btn-ghost">Scopri i pacchetti</a>
+      </div>
+      <ul class="checks">
+        <li>Da 19 €/mese</li>
+        <li>Nessun pensiero tecnico</li>
+        <li>Dominio intestato a te</li>
+      </ul>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="mock-bar"><b></b><b></b><b></b><span class="mock-url">www.latuaattivita.it</span></div>
+      <div class="mock-body">
+        <div class="mock-hero">La tua attività, online</div>
+        <div class="mock-line"></div><div class="mock-line"></div><div class="mock-line s"></div>
+        <div class="mock-cards"><div></div><div></div><div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VANTAGGI -->
+<section id="vantaggi">
+  <div class="container center">
+    <span class="eyebrow">Perché sceglierci</span>
+    <h2>Essere online non deve essere complicato</h2>
+    <p class="lead">Oggi i clienti ti cercano su Google prima di chiamarti. Un sito curato ti rende credibile e ti fa trovare.</p>
+    <div class="grid3" style="text-align:left">
+      <div class="card"><div class="ico">🚀</div><h3>Tutto incluso</h3><p>Sito one-page, dominio, hosting e certificato SSL in un solo canone. Niente fatture da fornitori diversi.</p></div>
+      <div class="card"><div class="ico">🛠️</div><h3>Zero pensieri tecnici</h3><p>Configurazione, aggiornamenti essenziali, sicurezza e backup sono a nostro carico.</p></div>
+      <div class="card"><div class="ico">📧</div><h3>Email con il tuo dominio</h3><p>Caselle come info@tuaazienda.it: più professionali e affidabili di un indirizzo gratuito.</p></div>
+      <div class="card"><div class="ico">🔒</div><h3>Il dominio è tuo</h3><p>Il dominio resta intestato a te. Lo gestiamo noi tecnicamente, ma è sempre di tua proprietà.</p></div>
+      <div class="card"><div class="ico">📍</div><h3>Ti fai trovare su Google</h3><p>Configurazione e gestione del profilo Google Business per comparire su Google e Maps.</p></div>
+      <div class="card"><div class="ico">🤝</div><h3>Un referente unico</h3><p>Una persona che ti risponde, ti assiste e ti segue nel tempo. Niente call center.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COME FUNZIONA -->
+<section id="come-funziona" class="soft">
+  <div class="container center">
+    <span class="eyebrow">Come funziona</span>
+    <h2>Dalla prima chiamata al sito online</h2>
+    <p class="lead">Un processo semplice, in quattro passaggi.</p>
+    <div class="steps" style="text-align:left">
+      <div class="step"><h3>Ci racconti la tua attività</h3><p>Una breve chiacchierata per capire servizi, orari, contatti e cosa vuoi comunicare.</p></div>
+      <div class="step"><h3>Scegliamo il dominio</h3><p>Verifichiamo la disponibilità del nome (es. pizzeriarossi.it) e lo registriamo a tuo nome.</p></div>
+      <div class="step"><h3>Realizziamo il sito</h3><p>Creiamo la tua pagina con testi, immagini e contatti, completa di SSL ed email.</p></div>
+      <div class="step"><h3>Online e assistenza</h3><p>Pubblichiamo il sito e restiamo al tuo fianco per assistenza e modifiche.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PACCHETTI -->
+<section id="pacchetti">
+  <div class="container center">
+    <span class="eyebrow">Pacchetti</span>
+    <h2>Scegli il pacchetto giusto per te</h2>
+    <p class="lead">Canoni mensili chiari, senza costi nascosti. Tutti i prezzi sono + IVA.</p>
+
+    <div class="pricing" style="text-align:left">
+      <div class="plan">
+        <h3>BASE</h3>
+        <p class="for">Per chi vuole semplicemente essere online.</p>
+        <div class="price">19 € <small>/mese</small></div>
+        <div class="vat">+ IVA</div>
+        <ul>
+          <li>Sito one-page professionale</li>
+          <li>Dominio</li>
+          <li>Hosting</li>
+          <li>Certificato SSL</li>
+          <li>Configurazione tecnica</li>
+        </ul>
+        <a href="#contatti" data-plan="BASE" class="btn btn-ghost">Scegli BASE</a>
+      </div>
+
+      <div class="plan featured">
+        <span class="badge">⭐ PIÙ SCELTO</span>
+        <h3>AZIENDA</h3>
+        <p class="for">Il pacchetto completo per una presenza professionale.</p>
+        <div class="price">29 € <small>/mese</small></div>
+        <div class="vat">+ IVA</div>
+        <ul>
+          <li><b>Tutto il pacchetto BASE</b></li>
+          <li>5 caselle email professionali</li>
+          <li>Backup</li>
+          <li>Gestione tecnica</li>
+          <li>Aggiornamenti essenziali</li>
+          <li>Assistenza</li>
+        </ul>
+        <a href="#contatti" data-plan="AZIENDA" class="btn btn-primary">Scegli AZIENDA</a>
+      </div>
+
+      <div class="plan">
+        <h3>PLUS</h3>
+        <p class="for">Per chi vuole anche una gestione continuativa.</p>
+        <div class="price">39 € <small>/mese</small></div>
+        <div class="vat">+ IVA</div>
+        <ul>
+          <li><b>Tutto il pacchetto AZIENDA</b></li>
+          <li>Piccole modifiche al sito</li>
+          <li>Aggiornamento testi e immagini</li>
+          <li>Assistenza prioritaria</li>
+          <li>Gestione tecnica continuativa</li>
+        </ul>
+        <a href="#contatti" data-plan="PLUS" class="btn btn-ghost">Scegli PLUS</a>
+      </div>
+    </div>
+
+    <div class="setup" style="text-align:left">
+      <div class="big">99 €<small>una tantum + IVA</small></div>
+      <div>
+        <ul>
+          <h3>⚙️ Configurazione iniziale</h3>
+          <li>Realizzazione del sito</li>
+          <li>Configurazione dominio e DNS</li>
+          <li>Configurazione hosting</li>
+          <li>Configurazione SSL</li>
+          <li>Configurazione email, se previste</li>
+          <li>Messa online del sito</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIZI AGGIUNTIVI -->
+<section class="soft">
+  <div class="container center">
+    <span class="eyebrow">Servizi aggiuntivi</span>
+    <h2>Fai crescere la tua presenza online</h2>
+    <p class="lead">Aggiungi solo ciò che ti serve, quando ti serve. Prezzi indicativi + IVA.</p>
+    <div class="addons" style="text-align:left">
+      <div class="addon"><span>Configurazione Google Business Profile</span><b>79 € una tantum</b></div>
+      <div class="addon"><span>Gestione Google Business</span><b>19 €/mese</b></div>
+      <div class="addon"><span>Email aggiuntiva</span><b>3 €/mese</b></div>
+      <div class="addon"><span>Pagina aggiuntiva del sito</span><b>49 €</b></div>
+      <div class="addon"><span>Modifica sito occasionale</span><b>30–50 €</b></div>
+      <div class="addon"><span>Nuova sezione/pagina personalizzata</span><b>80–150 €</b></div>
+      <div class="addon"><span>PEC</span><b>da 30 €/anno</b></div>
+      <div class="addon"><span>Manutenzione sito</span><b>15 €/mese</b></div>
+      <div class="addon"><span>Backup avanzato</span><b>5 €/mese</b></div>
+      <div class="addon"><span>Logo / grafica base</span><b>da 99 €</b></div>
+      <div class="addon"><span>SEO base / ottimizzazione Google</span><b>da 99 €</b></div>
+      <div class="addon"><span>Google Analytics + Search Console</span><b>49 € una tantum</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ESEMPIO -->
+<section>
+  <div class="container example">
+    <div>
+      <span class="eyebrow">Un esempio concreto</span>
+      <h2>Quanto costa per un parrucchiere?</h2>
+      <p class="lead">Sito completo con email professionali, presenza su Google e, se vuoi, la gestione del profilo Google affidata a noi.</p>
+      <ul>
+        <li>Il sito è il punto di partenza</li>
+        <li>Google, email e modifiche aggiungono valore nel tempo</li>
+        <li>Paghi solo i servizi che ti servono davvero</li>
+      </ul>
+    </div>
+    <div class="receipt">
+      <h4>💈 Parrucchiere — pacchetto AZIENDA</h4>
+      <div class="row"><span>Pacchetto AZIENDA</span><span>29 €/mese</span></div>
+      <div class="row"><span>Configurazione iniziale</span><span>99 €</span></div>
+      <div class="row"><span>Google Business Profile</span><span>79 €</span></div>
+      <div class="row total"><span>Costo iniziale</span><span>178 € + 29 €/mese</span></div>
+      <div class="row sep"><span>+ Gestione Google Business</span><span>19 €/mese</span></div>
+      <div class="row total"><span>Totale mensile</span><span>48 €/mese</span></div>
+      <p class="note" style="text-align:left;margin-top:14px">Tutti i prezzi + IVA.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="soft">
+  <div class="container center">
+    <span class="eyebrow">FAQ</span>
+    <h2>Domande frequenti</h2>
+    <div class="faq" style="text-align:left">
+      <details><summary>Il dominio è mio?</summary><p>Sì. Il dominio viene registrato con te come intestatario. Noi ci occupiamo della gestione tecnica (registrazione, rinnovi e DNS), ma la proprietà è tua.</p></details>
+      <details><summary>Quanto tempo serve per avere il sito online?</summary><p>Dipende da quanto rapidamente ci invii testi, immagini e informazioni. In genere si parla di pochi giorni dalla conferma.</p></details>
+      <details><summary>Cosa significa "one-page"?</summary><p>È un sito su una singola pagina, chiaro e veloce, con presentazione, servizi, contatti e mappa. Ideale per piccole attività. Se serve, puoi aggiungere altre pagine.</p></details>
+      <details><summary>Posso avere email con il nome della mia attività?</summary><p>Certo. Dal pacchetto AZIENDA hai 5 caselle professionali (es. info@tuaattivita.it). Ne puoi aggiungere altre a 3 €/mese l'una.</p></details>
+      <details><summary>Sono previsti vincoli o costi nascosti?</summary><p>I prezzi sono quelli indicati in pagina (+ IVA). Ti presentiamo sempre un preventivo chiaro prima di iniziare.</p></details>
+      <details><summary>Posso cambiare pacchetto in futuro?</summary><p>Sì, puoi passare a un pacchetto superiore in qualsiasi momento, in base alle tue esigenze.</p></details>
+      <details><summary>Chi mi aiuta se ho un problema o devo fare una modifica?</summary><p>Hai un referente diretto. Con il pacchetto PLUS le piccole modifiche e l'assistenza prioritaria sono incluse.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti" class="contact">
+  <div class="container contact-grid">
+    <div>
+      <span class="eyebrow">Contattaci</span>
+      <h2>Parliamo del tuo sito</h2>
+      <p class="lead">Compila il modulo: ti ricontattiamo per un preventivo gratuito e senza impegno.</p>
+      <ul class="contact-info">
+        <li>📞 <span id="cPhone">+39 000 000 0000</span></li>
+        <li>✉️ <span id="cMail">info@iltuodominio.it</span></li>
+        <li>📍 <span id="cZone">Trento e provincia</span></li>
+      </ul>
+    </div>
+    <form id="contactForm">
+      <label for="nome">Nome e cognome</label>
+      <input id="nome" name="nome" required>
+      <label for="attivita">Nome attività</label>
+      <input id="attivita" name="attivita">
+      <label for="tel">Telefono</label>
+      <input id="tel" name="tel" type="tel" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email">
+      <label for="pacchetto">Pacchetto di interesse</label>
+      <select id="pacchetto" name="pacchetto">
+        <option>Non lo so ancora</option>
+        <option>BASE — 19 €/mese</option>
+        <option>AZIENDA — 29 €/mese</option>
+        <option>PLUS — 39 €/mese</option>
+      </select>
+      <label for="msg">Messaggio (facoltativo)</label>
+      <textarea id="msg" name="msg"></textarea>
+      <button class="btn btn-primary" type="submit">Richiedi il preventivo</button>
+      <p class="note">Premendo il pulsante si aprirà il tuo programma di posta con la richiesta già compilata.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">© <span id="year"></span> <span id="brandFoot">Il Tuo Brand</span> — P.IVA 00000000000 · Tutti i prezzi sono IVA esclusa.</div>
+</footer>
+
+<script>
+  /* ====== PERSONALIZZA QUI ====== */
+  const CONFIG = {
+    brand: "Il Tuo Brand",
+    phone: "+39 000 000 0000",
+    email: "info@iltuodominio.it",
+    zone:  "Trento e provincia"
+  };
+  /* ============================== */
+
+  document.getElementById("brandName").textContent = CONFIG.brand;
+  document.getElementById("brandFoot").textContent = CONFIG.brand;
+  document.getElementById("cPhone").textContent = CONFIG.phone;
+  document.getElementById("cMail").textContent = CONFIG.email;
+  document.getElementById("cZone").textContent = CONFIG.zone;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // I pulsanti dei pacchetti preselezionano il menu nel modulo
+  document.querySelectorAll("[data-plan]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var sel = document.getElementById("pacchetto");
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].text.indexOf(b.dataset.plan) === 0) { sel.selectedIndex = i; }
+      }
+    });
+  });
+
+  // Il modulo apre il client di posta con i dati compilati
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = e.target;
+    var body = [
+      "Nome: " + f.nome.value,
+      "Attività: " + f.attivita.value,
+      "Telefono: " + f.tel.value,
+      "Email: " + f.email.value,
+      "Pacchetto: " + f.pacchetto.value,
+      "",
+      f.msg.value
+    ].join("\n");
+    window.location.href = "mailto:" + CONFIG.email +
+      "?subject=" + encodeURIComponent("Richiesta preventivo sito web") +
+      "&body=" + encodeURIComponent(body);
+  });
+
+  // Effetti: comparsa allo scroll, barra di avanzamento, header dinamico
+  (function () {
+    var bar = document.getElementById("progress");
+    var head = document.querySelector("header");
+    function onScroll() {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+      head.classList.toggle("scrolled", h.scrollTop > 10);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    var els = document.querySelectorAll(".card,.step,.plan,.addon,.receipt,.setup,details,.example > div:first-child,section h2,.lead");
+    if (!("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el, i) {
+      el.classList.add("reveal");
+      el.style.transitionDelay = ((i % 3) * 90) + "ms";
+      io.observe(el);
+    });
+  })();
+</script>
+</body>
+</html>
