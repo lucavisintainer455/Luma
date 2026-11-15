@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Calciobalilla gratis a Trento</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:#0b3d2e;color:#ffffff}
+a{text-decoration:none}
+</style>
+</helmet>
+<div style="width:100%;box-sizing:border-box;background:#0b3d2e;font-family:'Inter',system-ui,sans-serif;color:#ffffff">
+
+<!-- HEADER -->
+<div style="max-width:1160px;margin:0 auto;padding:20px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+<div style="font-size:28px;font-weight:900;letter-spacing:0.06em;color:{{accent}}">LUMA</div>
+<a href="tel:+393891956704" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 20px;border-radius:999px;background:{{accent}};color:#0b3d2e;font-weight:700;font-size:15px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b3d2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>
+Chiamaci
+</a>
+</div>
+
+<!-- HERO -->
+<div style="max-width:1160px;margin:0 auto;padding:40px 24px 72px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:24px">
+<div style="align-self:flex-start;padding:8px 16px;border-radius:999px;background:#11513c;border:1px solid #1f7a59;color:{{accent}};font-size:14px;font-weight:700;letter-spacing:0.04em">TRENTO E DINTORNI · BAR, PUB E LOCALI</div>
+<h1 style="margin:0;font-size:64px;line-height:1.03;font-weight:900;letter-spacing:-0.025em;color:#ffffff">Il calciobalilla nel tuo locale. <span style="color:{{accent}}">Gratis.</span></h1>
+<p style="margin:0;font-size:21px;line-height:1.55;color:#c7e4d6;max-width:560px">Lo portiamo noi, in comodato d'uso. Tu ci metti il posto, i tuoi clienti ci mettono la sfida. Una partita tira l'altra.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px">
+<a href="tel:+393891956704" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:14px;background:{{accent}};color:#0b3d2e;font-weight:800;font-size:18px">Voglio il calciobalilla</a>
+<a href="https://wa.me/393891956704" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:14px;background:transparent;color:#ffffff;border:2px solid #ffffff;font-weight:700;font-size:18px">Scrivici su WhatsApp</a>
+</div>
+</div>
+
+<div style="flex:1 1 420px;min-width:0;display:flex;justify-content:center">
+<svg viewBox="0 0 640 420" style="width:100%;max-width:600px;height:auto" role="img" aria-label="Calciobalilla visto dall'alto">
+<ellipse cx="320" cy="392" rx="270" ry="14" fill="#000000" opacity="0.25"></ellipse>
+<rect x="40" y="70" width="560" height="280" rx="20" fill="#6b3f1d"></rect>
+<rect x="40" y="70" width="560" height="280" rx="20" fill="none" stroke="#8a5528" stroke-width="3"></rect>
+<rect x="64" y="94" width="512" height="232" rx="8" fill="#1f9d55"></rect>
+<g stroke="#ffffff" stroke-opacity="0.7" stroke-width="3" fill="none">
+<line x1="320" y1="94" x2="320" y2="326"></line>
+<circle cx="320" cy="210" r="38"></circle>
+<rect x="64" y="160" width="46" height="100"></rect>
+<rect x="530" y="160" width="46" height="100"></rect>
+</g>
+<rect x="50" y="172" width="16" height="76" rx="3" fill="#0b1f17"></rect>
+<rect x="574" y="172" width="16" height="76" rx="3" fill="#0b1f17"></rect>
+<g stroke="#d7dee6" stroke-width="6" stroke-linecap="round">
+<line x1="120" y1="40" x2="120" y2="380"></line>
+<line x1="200" y1="40" x2="200" y2="380"></line>
+<line x1="280" y1="40" x2="280" y2="380"></line>
+<line x1="360" y1="40" x2="360" y2="380"></line>
+<line x1="440" y1="40" x2="440" y2="380"></line>
+<line x1="520" y1="40" x2="520" y2="380"></line>
+</g>
+<g fill="#111111">
+<rect x="111" y="14" width="18" height="30" rx="8"></rect><rect x="111" y="376" width="18" height="30" rx="8"></rect>
+<rect x="191" y="14" width="18" height="30" rx="8"></rect><rect x="191" y="376" width="18" height="30" rx="8"></rect>
+<rect x="271" y="14" width="18" height="30" rx="8"></rect><rect x="271" y="376" width="18" height="30" rx="8"></rect>
+<rect x="351" y="14" width="18" height="30" rx="8"></rect><rect x="351" y="376" width="18" height="30" rx="8"></rect>
+<rect x="431" y="14" width="18" height="30" rx="8"></rect><rect x="431" y="376" width="18" height="30" rx="8"></rect>
+<rect x="511" y="14" width="18" height="30" rx="8"></rect><rect x="511" y="376" width="18" height="30" rx="8"></rect>
+</g>
+<g fill="#ef4444" stroke="#7f1d1d" stroke-width="2">
+<rect x="108" y="194" width="24" height="32" rx="8"></rect>
+<rect x="188" y="150" width="24" height="32" rx="8"></rect><rect x="188" y="238" width="24" height="32" rx="8"></rect>
+<rect x="268" y="112" width="24" height="32" rx="8"></rect><rect x="268" y="194" width="24" height="32" rx="8"></rect><rect x="268" y="276" width="24" height="32" rx="8"></rect>
+</g>
+<g fill="#facc15" stroke="#854d0e" stroke-width="2">
+<rect x="348" y="112" width="24" height="32" rx="8"></rect><rect x="348" y="194" width="24" height="32" rx="8"></rect><rect x="348" y="276" width="24" height="32" rx="8"></rect>
+<rect x="428" y="150" width="24" height="32" rx="8"></rect><rect x="428" y="238" width="24" height="32" rx="8"></rect>
+<rect x="508" y="194" width="24" height="32" rx="8"></rect>
+</g>
+<circle cx="326" cy="236" r="9" fill="#ffffff" stroke="#0f172a" stroke-width="2"></circle>
+</svg>
+</div>
+</div>
+
+<!-- STRISCIA -->
+<div style="background:{{accent}};padding:18px 24px;box-sizing:border-box">
+<div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:center;font-size:20px;font-weight:900;letter-spacing:0.06em;color:#0b3d2e">
+<span>SFIDE</span><span>RISATE</span><span>CLIENTI CHE TORNANO</span>
+</div>
+</div>
+
+<!-- VANTAGGI -->
+<div style="max-width:1160px;margin:0 auto;padding:80px 24px;box-sizing:border-box;display:flex;flex-direction:column;gap:40px">
+<h2 style="margin:0;font-size:42px;line-height:1.1;font-weight:900;letter-spacing:-0.015em">Perché averlo nel tuo locale</h2>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+<div style="flex:1 1 280px;min-width:0;padding:28px;border-radius:20px;background:#11513c;border:1px solid #1f7a59;display:flex;flex-direction:column;gap:12px">
+<div style="font-size:44px;font-weight:900;color:{{accent}};line-height:1">0 €</div>
+<div style="font-size:22px;font-weight:800">Non paghi niente</div>
+<div style="font-size:16px;line-height:1.55;color:#c7e4d6">In comodato d'uso il calciobalilla non lo compri: te lo mettiamo a disposizione gratis.</div>
+</div>
+<div style="flex:1 1 280px;min-width:0;padding:28px;border-radius:20px;background:#11513c;border:1px solid #1f7a59;display:flex;flex-direction:column;gap:12px">
+<div style="font-size:44px;font-weight:900;color:{{accent}};line-height:1">+ tempo</div>
+<div style="font-size:22px;font-weight:800">Clienti che restano di più</div>
+<div style="font-size:16px;line-height:1.55;color:#c7e4d6">Una partita tira l'altra: chi gioca si ferma, e il tempo nel locale si allunga.</div>
+</div>
+<div style="flex:1 1 280px;min-width:0;padding:28px;border-radius:20px;background:#11513c;border:1px solid #1f7a59;display:flex;flex-direction:column;gap:12px">
+<div style="font-size:44px;font-weight:900;color:{{accent}};line-height:1">vs</div>
+<div style="font-size:22px;font-weight:800">Serate più vive</div>
+<div style="font-size:16px;line-height:1.55;color:#c7e4d6">Sfide tra amici e tra gruppi: un motivo in più per scegliere il tuo locale e tornarci.</div>
+</div>
+</div>
+</div>
+
+<!-- COME FUNZIONA -->
+<div style="background:#082f23;padding:80px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:flex;flex-direction:column;gap:40px">
+<h2 style="margin:0;font-size:42px;line-height:1.1;font-weight:900;letter-spacing:-0.015em">Come funziona</h2>
+<div style="display:flex;flex-wrap:wrap;gap:32px">
+<div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:12px">
+<div style="width:52px;height:52px;border-radius:999px;background:{{accent}};color:#0b3d2e;font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center">1</div>
+<div style="font-size:22px;font-weight:800">Ci contatti</div>
+<div style="font-size:16px;line-height:1.55;color:#c7e4d6">Una telefonata, un messaggio su WhatsApp o una email: come preferisci.</div>
+</div>
+<div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:12px">
+<div style="width:52px;height:52px;border-radius:999px;background:{{accent}};color:#0b3d2e;font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center">2</div>
+<div style="font-size:22px;font-weight:800">Ci accordiamo</div>
+<div style="font-size:16px;line-height:1.55;color:#c7e4d6">Definiamo insieme i dettagli del comodato d'uso per il tuo locale.</div>
+</div>
+<div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:12px">
+<div style="width:52px;height:52px;border-radius:999px;background:{{accent}};color:#0b3d2e;font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center">3</div>
+<div style="font-size:22px;font-weight:800">Lo portiamo noi</div>
+<div style="font-size:16px;line-height:1.55;color:#c7e4d6">Il calciobalilla arriva nel tuo locale e i tuoi clienti iniziano a giocare.</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- COMODATO -->
+<div style="max-width:1160px;margin:0 auto;padding:80px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+<div style="flex:1 1 320px;min-width:0">
+<h2 style="margin:0;font-size:36px;line-height:1.1;font-weight:900;letter-spacing:-0.015em">Cos'è il comodato d'uso?</h2>
+</div>
+<div style="flex:2 1 420px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<p style="margin:0;font-size:19px;line-height:1.6;color:#c7e4d6">Il calciobalilla resta nostro e viene messo a disposizione del tuo locale gratuitamente, per il periodo che concordiamo insieme.</p>
+<p style="margin:0;font-size:19px;line-height:1.6;color:#c7e4d6">Tu non spendi nulla per averlo: ti basta ospitarlo e lasciarlo giocare ai tuoi clienti.</p>
+</div>
+</div>
+
+<!-- CTA FINALE -->
+<div style="max-width:1160px;margin:0 auto;padding:0 24px 80px;box-sizing:border-box">
+<div style="padding:56px 40px;border-radius:28px;background:{{accent}};display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
+<h2 style="margin:0;font-size:42px;line-height:1.1;font-weight:900;letter-spacing:-0.015em;color:#0b3d2e">Hai un locale a Trento? Il calcetto te lo portiamo noi.</h2>
+<p style="margin:0;font-size:19px;line-height:1.55;color:#0b3d2e;max-width:560px">Chiamaci o scrivici: ti rispondiamo e vediamo insieme come portarlo da te.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px">
+<a href="tel:+393891956704" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:14px;background:#0b3d2e;color:#ffffff;font-weight:800;font-size:18px">Chiama 389 195 6704</a>
+<a href="tel:+393200274868" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:14px;background:#0b3d2e;color:#ffffff;font-weight:800;font-size:18px">Chiama 320 027 4868</a>
+</div>
+<a href="mailto:info@luma.tn.it" style="color:#0b3d2e;font-size:17px;font-weight:700;text-decoration:underline;min-height:44px;display:inline-flex;align-items:center">info@luma.tn.it</a>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div style="border-top:1px solid #1f7a59">
+<div style="max-width:1160px;margin:0 auto;padding:28px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between;font-size:15px;color:#c7e4d6">
+<div style="font-weight:900;letter-spacing:0.06em;color:{{accent}};font-size:20px">LUMA</div>
+<div>Trento e dintorni · 389 195 6704 · 320 027 4868 · info@luma.tn.it</div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#facc15","options":["#facc15","#fb923c","#f472b6","#ffffff"]},"$preview":{"width":1280,"height":2200}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#facc15' };
+}
+}
+</script>
+</body>
+</html>
